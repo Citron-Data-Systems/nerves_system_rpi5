@@ -29,7 +29,8 @@ dtparam=spi=on
 dtparam=audio=on
 
 # Automatically load overlays for detected cameras
-camera_auto_detect=1
+dtoverlay=imx219
+camera_auto_detect=0
 
 # Automatically load overlays for detected DSI displays
 display_auto_detect=1
@@ -60,7 +61,7 @@ arm_boost=1
 dtoverlay=dwc2
 
 # Add a can0 spi overlay
-dtoverlay=mcp2515-can0,oscillator=80000000,interrupt=23
+dtoverlay=mcp2515-can0,oscillator=80000000,interrupt=25
 dtoverlay=spi-bcm2835
 
 # The ramoops overlay works with the pstore driver to preserve crash
